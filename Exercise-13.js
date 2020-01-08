@@ -1,3 +1,10 @@
+function abs(num){
+    if(num<0){
+        num = num*-1
+    }
+    return num
+}
+
 function targetTerdekat(arr) {
     var o_loc =[]
     for(let i=0; i<arr.length; i++){
@@ -14,11 +21,11 @@ function targetTerdekat(arr) {
     if(x_loc == false){
         return 0
     }
-    var result = Math.abs(o_loc[0] - x_loc[0])
+    var result = abs(o_loc[0] - x_loc[0])
     for(let i=0; i<o_loc.length; i++){
         for(let j=0; j<x_loc.length; j++){
-            if(result>Math.abs(o_loc[i] - x_loc[j])){
-                result = Math.abs(o_loc[i] - x_loc[j])
+            if(result>abs(o_loc[i] - x_loc[j])){
+                result = abs(o_loc[i] - x_loc[j])
             }
         }
     }
